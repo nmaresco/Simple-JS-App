@@ -2,7 +2,7 @@ body {
   background-color: lightblue;
 }
 #pokemon-wrapper {
-  text-align: center;
-  display: grid;
-  
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
 }
