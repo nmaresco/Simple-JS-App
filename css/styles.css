@@ -5,4 +5,10 @@ body {
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  position: relative;
+  top: 24px;
+  background-color: cornflowerblue;
+  margin: auto 0;
+  border-style:dashed;
+  word-spacing: 10px;
 }
