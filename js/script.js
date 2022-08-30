@@ -32,6 +32,15 @@ const pokemonRepository = (function(){
     getAll,
     add,
   }
+  function addListItem(pokemon) {
+         const pokemonList = document.querySelector('.pokemon-list');
+         const listItem = document.createElement('li');
+         const button = document.createElement('button');
+         button.innerText = pokemon.name;
+         button.classList.add('btn')
+         listItem.appendChild(button);
+         pokemonList.appendChild(listItem);
+       }
 })()
 
 //Uncomment this to test the add function
@@ -44,11 +53,10 @@ const pokemonListToAdd =  [
 
 pokemonListToAdd.forEach(function(pokemon) {
   pokemonRepository.add(pokemon)
+
 })
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write(pokemon.name + '<br/>');
-  document.write(pokemon.height + '<br/>');
-  document.write(pokemon.type + '<br/>');
-  document.write('<br/>');
+  pokemonRepository.addListItem(pokemon);
+
 })
