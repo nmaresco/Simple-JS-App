@@ -27,12 +27,7 @@ const pokemonRepository = (function(){
       pokemonList.push(item);
     }
   }
-  //SHOULD ONLY RETURN WHAT IS NEEDED OUTSIDE THE FUNCTION
-  return {
-    getAll,
-    add,
-    addListItem
-  }
+
   function addListItem(pokemon) {
      const pokemonList = document.querySelector('.pokemon-list');
      const listItem = document.createElement('li');
@@ -46,7 +41,13 @@ const pokemonRepository = (function(){
         })
    }
   function showDetails(pokemon){
-    console.log(pokemon[1,2,3,4])
+    console.log(pokemon)
+  }
+  //SHOULD ONLY RETURN WHAT IS NEEDED OUTSIDE THE FUNCTION
+  return {
+    getAll,
+    add,
+    addListItem
   }
 })()
 
