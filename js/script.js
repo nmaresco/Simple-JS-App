@@ -52,12 +52,9 @@ const pokemonRepository = (function(){
 })()
 
 //Uncomment this to test the add function
-const pokemonListToAdd =  [
-  {name:'Pikachu',height:4,type:'electric'},
-  {name:'Charmander',height:6,type:'fire'},
-  {name:'Squirtle', height:5,type:'water'},
-  {name:'Squirtle', height:5,type:'water'}
-];
+const pokemonArray = [
+
+]
 
 pokemonListToAdd.forEach(function(pokemon) {
   pokemonRepository.add(pokemon)
