@@ -51,6 +51,12 @@ const pokemonRepository = (function(){
   }
 })()
 
+function LoadList(){
+  return fetch('https://pokeapi.co/api/v2/pokemon/')
+}
+function loadDetails(pokemon){
+  document.write(pokemon.name)
+}
 //Uncomment this to test the add function
 const pokemonArray = [
 
