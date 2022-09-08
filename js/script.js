@@ -73,7 +73,11 @@ const pokemonRepository = (function(){
   return {
     getAll,
     addListItem,
+<<<<<<< HEAD
     loadList,
+=======
+    loadList
+>>>>>>> 79175e1dbf121fb7be628987d9a2d8ba8338604b
   }
 })()
 
