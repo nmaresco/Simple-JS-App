@@ -6,11 +6,19 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+
     <h1>My Pokedex</h1>
 
-    <ul class='pokemon-list'>
+    <div id='modal'>
+       <h1 id = 'modal-title'>Modal title</h1>
+       <button class='modal-close'>Close</button>
+       <img width="300px" id="modal-image">
+       <p id = 'modal-height'></p>
+    </div>
 
+    <ul class='pokemon-list'>
     </ul>
+
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
     <div id="pokemon-wrapper">

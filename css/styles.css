@@ -27,3 +27,8 @@ ul {
   list-style: none;
   text-align: center;
 }
+#modal {
+  display: none;
+  text-align: center;
+  background-color: white;
+}
