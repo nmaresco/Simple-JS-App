@@ -57,23 +57,31 @@ const pokemonRepository = (function(){
 
    function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-
+      console.log(pokemon)
       document.getElementById('modal-title').innerText = pokemon.name;
        document.getElementById('modal-height').innerText= 'Height: ' + pokemon.height;
-    });
+       document.getElementById('modal-image').src =  pokemon.imageUrl;
+    
+  });
+    document.querySelector('.modal-close').addEventListener('click', function(event) { hideDetails()})
+}
 
-    function hideDetails() {
-
-      document.getElementById('modal-close').addEventListener('click', function(event) {
+  function hideDetails() {
+//
+    //  document.getElementById('modal-close').addEventListener('click', function(event) {
              document.getElementById('modal').style.display = 'none';
-         })
+    //     })
     }
-  }
+
+
+  let pokemonImage = document.getElementById('modal-image');
+
   //SHOULD ONLY RETURN WHAT IS NEEDED OUTSIDE THE FUNCTION
   return {
     getAll,
     addListItem,
-    loadList
+    loadList,
+
   }
 })()
 
