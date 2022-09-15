@@ -1,6 +1,3 @@
-body {
-  background-color: lightblue;
-}
 #pokemon-wrapper {
   display: flex;
   flex-grow: 1;
@@ -23,16 +20,29 @@ h1 {
 button {
   border-radius: 15px;
   justify-content: center;
+  background-color: white;
 }
 ul {
   list-style: none;
   text-align: center;
 }
-#modal {
+.modal {
   display: none;
   text-align: center;
-  background-color: yellow;
   border-radius: 8px;
   max-width: 800px;
   margin: auto;
+}
+.modal-dialog {
+  background-color: orange;
+}
+.container {
+  background-color: lightblue;
+}
+li > button {
+  background-color: white;
+}
+.nav-link {
+  display: inline-block;
+  margin: 0 auto;
 }

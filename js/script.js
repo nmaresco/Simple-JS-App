@@ -42,7 +42,7 @@ const pokemonRepository = (function(){
   }
 
   function addListItem(pokemon) {
-     const pokemonList = document.querySelector('.pokemon-list');
+     const pokemonList = document.querySelector('.list-group');
      const listItem = document.createElement('li');
      const button = document.createElement('button');
      button.innerText = pokemon.name;
@@ -50,26 +50,31 @@ const pokemonRepository = (function(){
      listItem.appendChild(button);
      pokemonList.appendChild(listItem);
      button.addEventListener('click', function(event) {
-            document.getElementById('modal').style.display = 'block';
-            showDetails(pokemon)
+            document.querySelector('.modal').style.display = 'block';
+            showDetails(pokemon);
+            listItem.addClass('group-list-item');
+            button.addClass('btn-primary')
         })
+
    }
 
    function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       console.log(pokemon)
-      document.getElementById('modal-title').innerText = pokemon.name;
-       document.getElementById('modal-height').innerText= 'Height: ' + pokemon.height;
-       document.getElementById('modal-image').src =  pokemon.imageUrl;
-    
+      document.querySelector('.modal-title').innerText = pokemon.name;
+       document.querySelector('.modal-height').innerText= 'Height: ' + pokemon.height;
+       document.querySelector('.modal-image').src =  pokemon.imageUrl;
+
   });
-    document.querySelector('.modal-close').addEventListener('click', function(event) { hideDetails()})
+    document.querySelector('.close').addEventListener('click', function(event) { hideDetails()})
 }
 
   function hideDetails() {
 //
     //  document.getElementById('modal-close').addEventListener('click', function(event) {
-             document.getElementById('modal').style.display = 'none';
+             document.querySelector('.modal').style.display = 'none';
+             document.querySelector('.modal-close').addClass('btn')
+
     //     })
     }
 
@@ -80,7 +85,8 @@ const pokemonRepository = (function(){
   return {
     getAll,
     addListItem,
-    loadList,
+    loadList
+
 
   }
 })()
