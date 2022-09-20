@@ -5,7 +5,7 @@ const pokemonRepository = (function(){
 
   function getAll (){
     return pokemonList;
-  };
+  }
 
   function add(item){
       pokemonList.push(item);
@@ -49,7 +49,7 @@ const pokemonRepository = (function(){
      button.classList.add('btn-info');
      listItem.appendChild(button);
      pokemonList.appendChild(listItem);
-     button.addEventListener('click', function(event) {
+     button.addEventListener('click', function() {
             document.querySelector('.modal').style.display = 'block';
             showDetails(pokemon);
             listItem.addClass('group-list-item');
@@ -66,7 +66,7 @@ const pokemonRepository = (function(){
        document.querySelector('.modal-image').src =  pokemon.imageUrl;
 
   });
-    document.querySelector('.close').addEventListener('click', function(event) { hideDetails()})
+    document.querySelector('.close').addEventListener('click', function() { hideDetails()})
 }
 
   function hideDetails() {
@@ -79,7 +79,6 @@ const pokemonRepository = (function(){
     }
 
 
-  let pokemonImage = document.getElementById('modal-image');
 
   //SHOULD ONLY RETURN WHAT IS NEEDED OUTSIDE THE FUNCTION
   return {
