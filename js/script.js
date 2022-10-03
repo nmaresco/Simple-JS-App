@@ -50,7 +50,7 @@ const pokemonRepository = (function(){
      listItem.appendChild(button);
      pokemonList.appendChild(listItem);
      button.addEventListener('click', function() {
-            document.querySelector('.modal').style.display = 'block';
+            document.querySelector('.modal').style.display = 'grid';
             showDetails(pokemon);
             listItem.addClass('group-list-item');
             button.addClass('btn-primary')

@@ -31,7 +31,7 @@ ul {
   text-align: center;
   border-radius: 8px;
   max-width: 800px;
-  margin: auto;
+  margin: auto 0;
 }
 .modal-dialog {
   background-color: orange;
@@ -52,4 +52,13 @@ li > button {
 .display-1 {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+}
+.modal-header {
+  background-color: coral;
+}
+.modal-body {
+  background-color: aquamarine;
+}
+.modal-wrapper {
+  justify-content: center;
 }
